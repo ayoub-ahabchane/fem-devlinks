@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .tabBtn {
+    @apply px-[1.69em] py-[0.69em] rounded-lg font-semibold border border-transparent text-heading-s hover:text-dl-accent-400 text-dl-neutral-300 transition flex items-center gap-2;
+  }
+
+  .tabBtn[data-state="active"] {
+    @apply bg-dl-accent-200 text-dl-accent-400;
+  }
+}
+
+@layer utilities {
+  .tabWrapper {
+    @apply p-6;
+  }
+}
