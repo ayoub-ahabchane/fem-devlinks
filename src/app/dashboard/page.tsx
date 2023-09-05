@@ -3,7 +3,7 @@ import PreviewTab from "@/components/Tabs/PreviewTab";
 import ProfileTab from "@/components/Tabs/ProfileTab";
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Devlinks",
+  title: "Dashboard",
 };
 
 export default function Home() {
