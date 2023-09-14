@@ -6,14 +6,14 @@ import DevlinksLogo from "./DevlinksLogo";
 import TabsList from "./TabsList";
 import UserButton from "./UserButton";
 
-const Header = async () => {
+const Navbar = async () => {
   const supabase = createServerComponentClient({ cookies });
   const {
     data: { user },
   } = await supabase.auth.getUser();
 
   return (
-    <header className="md:rounded-lg flex items-center justify-between p-4  border-dl-accent-400 bg-dl-neutral-100">
+    <nav className="md:rounded-lg flex items-center justify-between p-4  border-dl-accent-400 bg-dl-neutral-100">
       <div className="flex items-center gap-2">
         <DevlinksLogo className="w-11 h-11 md:w-10 md:h-10 shrink-0" />
         <span className="font-bold text-3xl hidden md:inline-block">
@@ -32,8 +32,8 @@ const Header = async () => {
         </Link>
         <UserButton user={user!} />
       </div>
-    </header>
+    </nav>
   );
 };
 
-export default Header;
+export default Navbar;

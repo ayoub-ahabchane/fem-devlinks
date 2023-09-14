@@ -18,9 +18,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className=" text-dl-neutral-600">
+    <html lang="en" className=" text-dl-neutral-600 h-screen overflow-auto">
       <body
-        className={`${instrumentSans.className} h-screen flex flex-col bg-dl-neutral-200`}
+        className={`${instrumentSans.className} h-screen flex flex-col bg-dl-neutral-200 overflow-auto`}
       >
         {children}
       </body>

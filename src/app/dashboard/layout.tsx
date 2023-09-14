@@ -1,8 +1,5 @@
 import ContextWrapper from "@/components/ContextWrapper";
-import DevlinksLogo from "@/components/DevlinksLogo";
-import Header from "@/components/Header";
-import TabsList from "@/components/TabsList";
-import Link from "next/link";
+import Navbar from "@/components/Header";
 import React from "react";
 export default function DashboardLayout({
   children,
@@ -11,9 +8,8 @@ export default function DashboardLayout({
 }) {
   return (
     <ContextWrapper>
-      <div className="flex flex-col flex-1 md:p-4 md:gap-4 items-stretch bg-dl-neutral-200">
-        <Header />
-
+      <div className="flex flex-col flex-1 md:p-4 md:gap-4 items-stretch bg-dl-neutral-200 overflow-auto">
+        <Navbar />
         {children}
       </div>
     </ContextWrapper>

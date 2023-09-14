@@ -32,7 +32,7 @@ const UserButton = ({ user }: { user: User }) => {
           sideOffset={16}
         >
           <DropdownMenu.Item
-            className="px-[1.69em] py-[0.69em]  font-semibold rounded-lg hover:outline-none focus-within:text-dl-accent-400 transition"
+            className="px-[1.69em] py-[0.69em]  font-semibold rounded-lg hover:outline-none focus-within:text-dl-accent-400 transition cursor-pointer"
             onClick={(e) => {
               e.preventDefault();
 
