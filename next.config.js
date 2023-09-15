@@ -4,6 +4,7 @@ const nextConfig = {
     serverActions: true,
   },
   images: {
+    dangerouslyAllowSVG: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -12,6 +13,10 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "source.boringavatars.com",
       },
     ],
   },

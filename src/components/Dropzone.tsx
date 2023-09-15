@@ -66,7 +66,7 @@ const Dropzone = () => {
             {currentAvatar && (
               <Image
                 fill
-                className={`object-cover object-center group-hover:grayscale transition-all ${
+                className={`object-cover object-center group-hover:grayscale group-focus-within:grayscale transition-all ${
                   isDragActive && "grayscale"
                 }`}
                 src={
@@ -81,17 +81,18 @@ const Dropzone = () => {
                 }}
               />
             )}
+
             <motion.div
               variants={overlayVariants}
               initial={{ opacity: 0 }}
               animate={overlayStatus}
               transition={{ ease: "easeOut", duration: 0.25 }}
-              className="bg-dl-accent-200 bg-opacity-50 absolute inset-0 flex flex-col items-center justify-center font-semibold text-dl-accent-400"
+              className="bg-dl-accent-200 bg-opacity-50 absolute inset-0 flex flex-col items-center justify-center font-semibold text-dl-neutral-100"
               whileHover={{
                 opacity: 100,
               }}
             >
-              {!currentAvatar && <IoImageOutline className="w-8 h-8" />}
+              {<IoImageOutline className="w-8 h-8" />}
               <span>{prompt}</span>
             </motion.div>
           </div>

@@ -18,12 +18,12 @@ type FormData = {
 const ContextWrapper = ({ children }: { children: React.ReactNode }) => {
   const supabase = createClientComponentClient<Database>();
   const fetcher = async () => {
-    const { data } = await supabase.from("userprofile").select("*").limit(1);
-    return data ? data[0] : null;
+    const res = (await supabase.from("userprofile").select("*").limit(1)).data;
+    return res ? res[0] : null;
   };
 
   const { data } = useSWR("userprofile", fetcher);
-
+  console.log(data);
   const methods = useForm<FormData>({
     values: {
       firstName: data?.first_name,

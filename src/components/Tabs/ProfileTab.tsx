@@ -1,11 +1,7 @@
 "use client";
-import { Database } from "@/lib/supabase/database.types";
 import * as Tabs from "@radix-ui/react-tabs";
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { useFormContext } from "react-hook-form";
-import useSWR from "swr";
 import Dropzone from "../Dropzone";
-import { useEffect } from "react";
 
 const ProfileTab = () => {
   const {
@@ -62,7 +58,7 @@ const ProfileTab = () => {
             <input
               id="firstName"
               placeholder="John"
-              className={`px-4 py-3 rounded-lg border transition outline-none ${
+              className={`px-4 py-3 rounded-lg border transition outline-none w-full ${
                 firsNameErrors
                   ? "border-dl-danger"
                   : "border-dl-neutral-400 focus-within:border-dl-accent-400"
@@ -89,7 +85,7 @@ const ProfileTab = () => {
             <input
               id="lastName"
               placeholder="Doe"
-              className={`px-4 py-3 rounded-lg border transition outline-none ${
+              className={`px-4 py-3 rounded-lg border transition outline-none w-full ${
                 lastNameErrors
                   ? "border-dl-danger"
                   : "border-dl-neutral-400 focus-within:border-dl-accent-400"
@@ -116,7 +112,7 @@ const ProfileTab = () => {
             <input
               id="email"
               placeholder="john.doe@example.com"
-              className={`px-4 py-3 rounded-lg border transition outline-none ${
+              className={`px-4 py-3 rounded-lg border transition outline-none w-full ${
                 emailErrors
                   ? "border-dl-danger"
                   : "border-dl-neutral-400 focus-within:border-dl-accent-400"
